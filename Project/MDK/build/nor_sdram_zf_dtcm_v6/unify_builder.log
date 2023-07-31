@@ -1,0 +1,357 @@
+[2023-03-23 21:31:29]	compilation failed at : "c:\Users\49075\Desktop\smart car\smart-car\Libraries\nxp_libraries\drives\fsl_adc.c", exit code: 1
+   at unify_builder.Program.compileByMulThread(Int32 thrNum, CmdInfo[] cmds_, List`1 errLogs)
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+Error: C9555E: Failed to check out a license.
+The license file could not be found. Check that ARMLMD_LICENSE_FILE is set correctly.
+ARMLMD_LICENSE_FILE is not set. You must set this to the path to your license.
+Information about this error is available at: http://ds.arm.com/support/lic87/m1
+ General licensing information is available at: http://ds.arm.com/support/licensing/
+ If you need further help, provide this complete error report to your supplier or license.support@arm.com.
+ - ARMLMD_LICENSE_FILE: unset
+ - LM_LICENSE_FILE: unset
+ - ARM_TOOL_VARIANT: unset
+ - ARM_PRODUCT_PATH: unset
+ - Product location: D:\Keil\5.06\sw\mappings
+ - Toolchain location: D:\Keil\5.06\bin
+ - Selected tool variant: product
+ - Checkout feature: compiler5
+ - Feature version: 5.0202006
+ - Flex error code: -1
+Product: ARM Compiler 5.06
+Component: ARM Compiler 5.06 update 7 (build 960)
+Tool: armcc [4d365d]
+
+[2023-03-23 21:31:36]	Not found 'C Compiler' !, [path]: "D:\Keil\5.06\bin\armclang.exe"
+   at unify_builder.Program.Main(String[] args_)
+
+[2023-03-23 21:32:27]	link failed !, exit code: 1
+   at unify_builder.Program.Main(String[] args_)
+---
+Error: L6406E: No space in execution regions with .ANY selector matching pow.o(.constdata).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.rt_sem_create).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.list).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.display_entry).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.msh_help).
+Error: L6406E: No space in execution regions with .ANY selector matching poly.o(i.__kernel_poly).
+Error: L6406E: No space in execution regions with .ANY selector matching sqrt.o(i.sqrt).
+Error: L6406E: No space in execution regions with .ANY selector matching uldiv.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching ldiv.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.rt_kprintf).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.version).
+Error: L6406E: No space in execution regions with .ANY selector matching dfixl.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA1_DMA17_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA2_DMA18_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA3_DMA19_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA4_DMA20_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA5_DMA21_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA6_DMA22_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA7_DMA23_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA8_DMA24_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA9_DMA25_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA10_DMA26_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA11_DMA27_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA12_DMA28_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA13_DMA29_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA14_DMA30_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA15_DMA31_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DMA0_DMA16_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.example_uart1_callback).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.PIT_IRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.main_thread_entry).
+Error: L6406E: No space in execution regions with .ANY selector matching fpclassify.o(i.__ARM_fpclassify).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.CAN1_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.CAN2_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.CAN3_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.SAI3_TX_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.SAI3_RX_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching dscalb.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.rt_sprintf).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.buzzer_entry).
+Error: L6406E: No space in execution regions with .ANY selector matching memcpy.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPSPI1_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPSPI2_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPSPI3_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPSPI4_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching dfltl.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching memseta.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching llushr.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.hello).
+Error: L6406E: No space in execution regions with .ANY selector matching strncmp.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching llshl.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPUART1_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPUART2_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPUART3_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPUART5_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPUART6_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPUART7_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPUART4_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPUART8_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.GPIO3_Combined_0_15_IRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching memcmp.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching strcat.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching dunder.o(i.__mathlib_dbl_divzero).
+Error: L6406E: No space in execution regions with .ANY selector matching dunder.o(i.__mathlib_dbl_invalid).
+Error: L6406E: No space in execution regions with .ANY selector matching dunder.o(i.__mathlib_dbl_overflow).
+Error: L6406E: No space in execution regions with .ANY selector matching dunder.o(i.__mathlib_dbl_underflow).
+Error: L6406E: No space in execution regions with .ANY selector matching fabs.o(i.fabs).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.GPIO2_Combined_16_31_IRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.clear).
+Error: L6406E: No space in execution regions with .ANY selector matching strcpy.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPI2C2_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPI2C3_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPI2C4_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.__aeabi_assert).
+Error: L6406E: No space in execution regions with .ANY selector matching strlen.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.LPI2C1_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.USDHC2_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.GPIO2_Combined_0_15_IRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching errno.o(i.__set_errno).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.ENET_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.ENET2_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.USDHC1_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(FSymTab).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.cmd_ps).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.cmd_free).
+Error: L6406E: No space in execution regions with .ANY selector matching qnan.o(.constdata).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.rodata.cst8).
+Error: L6406E: No space in execution regions with .ANY selector matching dunder.o(i.__mathlib_dbl_infnan2).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.rti_start).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.rti_board_start).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.rti_board_end).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.rti_end).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.rti_fn.6).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.rti_fn.0).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.rti_fn.0.end).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.rti_fn.1.end).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.rti_fn.6.end).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.FLEXIO1_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.FLEXIO2_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.FLEXIO3_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.SAI1_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.SAI2_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.SPDIF_DriverIRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.NMI_Handler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.BusFault_Handler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.UsageFault_Handler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.SVC_Handler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.DebugMon_Handler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.USB_OTG1_IRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.USB_OTG2_IRQHandler).
+Error: L6406E: No space in execution regions with .ANY selector matching iusefp.o(.text).
+Error: L6406E: No space in execution regions with .ANY selector matching lto-llvm-c9afa4.o(.text.ENET_1588_Timer_IRQHandler).
+Error: L6407E: Sections of aggregate size 0x11a8 bytes could not fit into .ANY selector(s).
+Not enough information to list image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 113 error messages.
+
+
