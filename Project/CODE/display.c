@@ -2,8 +2,8 @@
 
 rt_mailbox_t display_mailbox; // 定义一个接受信息的邮箱
 
-int angle1;
-int angle2;
+int angle_y = 95;
+int angle_x = 95;
 
 char taget_Big_category[10];
 
@@ -44,11 +44,45 @@ void Menu_key_set(void)
 	{
 		
 
-			angle1 ++;
-			ARM_UP_angle(angle1);
-		ips114_showint16(70, 0, angle1);
-			
-			
+//			ARM_UP_angle(angle_y);
+//			ips114_showint16(70, 0, angle_y);
+		
+		
+//		ARM_UP_MOVE(angle_y*20);
+//		ARM_UP_MOVE(angle_y*10);
+//		ARM_back();
+//		angle_y++;
+//		ARM_UP_TAR_ANGLE = angle_y;
+////		
+//		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
+		
+		
+//		ARM_UP_TAR_ANGLE = 127.0545  -0.2443 * 118;
+//		ARM_LOW_TAR_ANGLE = 142.4687  -0.2376 * 175;
+//		rt_thread_mdelay(1000);
+//			ARM_UP_TAR_ANGLE = 127.0545  -0.2443 * 157;
+//		ARM_LOW_TAR_ANGLE = 142.4687  -0.2376 * 166;
+//			rt_thread_mdelay(1000);
+//		ARM_UP_TAR_ANGLE = 127.0545  -0.2443 * 171;
+//		ARM_LOW_TAR_ANGLE = 142.4687  -0.2376 * 223;
+//		rt_thread_mdelay(1000);		
+//		ARM_UP_TAR_ANGLE = 127.0545  -0.2443 * 132;
+//		ARM_LOW_TAR_ANGLE = 142.4687  -0.2376 * 235;
+//		rt_thread_mdelay(1000);
+		smooth_move(175, 118, 164, 157);
+		smooth_move(164, 157, 223, 172);
+		smooth_move(223, 172, 235, 133);
+		smooth_move(235, 133, 175, 118);
+
+
+//		smooth_move(175, 118, 175, 98);
+//		smooth_move(175, 98, 223, 98);
+//		smooth_move(223, 98, 223, 118);
+//		smooth_move(223, 118, 175, 118);
+
+
+
+		
 		mb_data = 0; // 邮箱数据清除
 	}
 
@@ -56,9 +90,21 @@ void Menu_key_set(void)
 	if ((mb_data == 2)) // 按下按键1
 	{
 
-					angle1 --;
-			ARM_UP_angle(angle1);
-		ips114_showint16(70, 0, angle1);
+//					angle_y --;
+//			ARM_UP_angle(angle_y);
+//		ips114_showint16(70, 0, angle_y);
+//		angle_x++;
+//		ARM_LOW_TAR_ANGLE = angle_x*10;
+//		ARM_LOW_MOVE(angle_x*10);
+		angle_y--;
+		ARM_UP_TAR_ANGLE = angle_y;
+		
+		
+	
+		
+		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
+		
+		
 		
 		mb_data = 0; // 邮箱数据清除
 	}
@@ -66,7 +112,20 @@ void Menu_key_set(void)
 
 	if ((mb_data == 3))
 	{
+//					angle_x ++;
+//			ARM_LOW_angle(angle_x);
+//			ips114_showint16(70, 0, angle_y);
+//			
+			angle_x++;
+		
+			ARM_LOW_TAR_ANGLE = angle_x;
+		
+		
 
+			
+		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
+			
+//ARM_UP_TAR_ANGLE = 90;
 		mb_data = 0; // 邮箱数据清除
 	}
 
@@ -74,26 +133,24 @@ void Menu_key_set(void)
 	{
 
 		
+//					angle_x --;
+//			ARM_LOW_angle(angle_x);
+//			ips114_showint16(70, 0, angle_y);
+		angle_x--;
+						ARM_LOW_TAR_ANGLE = angle_x;
+		
+		
+		
+
+			
+		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
+//			ARM_UP_TAR_ANGLE = 150;
 		mb_data = 0; // 邮箱数据清除
 	}
 
 }
 
 
-void GUI_motor_value() // 显示电机状态，和路程状态
-{
-
-	ips114_showstr(0, 0, "ENCODER1:");
-	ips114_showstr(0, 1, "ENCODER2:");
-
-
-	ips114_showint16(70, 0, RC_encoder1);
-	ips114_showint16(70, 1, RC_encoder2);
-	
-	ips114_showstr(0, 2, "gyro_z:");
-	ips114_showfloat(60, 3, angle_z, 3, 2);
-
-}
 
 
 void display_entry(void *parameter)
@@ -121,7 +178,7 @@ void display_init(void)
 	ips114_init();
 
 	// 创建显示线程 优先级设置为31
-	display_th = rt_thread_create("display", display_entry, RT_NULL, 1024, 31, 1000);
+	display_th = rt_thread_create("display", display_entry, RT_NULL, 1024, 30, 10);
 
 	display_mailbox = rt_mb_create("display", 5, RT_IPC_FLAG_FIFO);
 

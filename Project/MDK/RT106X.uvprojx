@@ -2175,16 +2175,6 @@
           <GroupName>code</GroupName>
           <Files>
             <File>
-              <FileName>imu963.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\imu963.h</FilePath>
-            </File>
-            <File>
-              <FileName>imu963.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\imu963.c</FilePath>
-            </File>
-            <File>
               <FileName>smotor.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\CODE\smotor.h</FilePath>
@@ -2225,36 +2215,6 @@
               <FilePath>..\CODE\button.c</FilePath>
             </File>
             <File>
-              <FileName>encoder.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\encoder.c</FilePath>
-            </File>
-            <File>
-              <FileName>encoder.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\encoder.h</FilePath>
-            </File>
-            <File>
-              <FileName>motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\motor.c</FilePath>
-            </File>
-            <File>
-              <FileName>motor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\motor.h</FilePath>
-            </File>
-            <File>
-              <FileName>timer_pit.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\timer_pit.c</FilePath>
-            </File>
-            <File>
-              <FileName>timer_pit.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\timer_pit.h</FilePath>
-            </File>
-            <File>
               <FileName>filter.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\CODE\filter.c</FilePath>
@@ -2263,26 +2223,6 @@
               <FileName>filter.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\CODE\filter.h</FilePath>
-            </File>
-            <File>
-              <FileName>carmove.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\carmove.c</FilePath>
-            </File>
-            <File>
-              <FileName>carmove.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\carmove.h</FilePath>
-            </File>
-            <File>
-              <FileName>openart2.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\openart2.c</FilePath>
-            </File>
-            <File>
-              <FileName>openart2.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\openart2.h</FilePath>
             </File>
             <File>
               <FileName>openart1.c</FileName>
@@ -2295,24 +2235,14 @@
               <FilePath>..\CODE\openart1.h</FilePath>
             </File>
             <File>
-              <FileName>icm20602.c</FileName>
+              <FileName>timer_pit.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\CODE\icm20602.c</FilePath>
+              <FilePath>..\..\..\smart-car\Project\CODE\timer_pit.c</FilePath>
             </File>
             <File>
-              <FileName>icm20602.h</FileName>
+              <FileName>timer_pit.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\CODE\icm20602.h</FilePath>
-            </File>
-            <File>
-              <FileName>carmove2.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\carmove2.c</FilePath>
-            </File>
-            <File>
-              <FileName>carmove2.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\carmove2.h</FilePath>
+              <FilePath>..\..\..\smart-car\Project\CODE\timer_pit.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -4486,16 +4416,6 @@
           <GroupName>code</GroupName>
           <Files>
             <File>
-              <FileName>imu963.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\imu963.h</FilePath>
-            </File>
-            <File>
-              <FileName>imu963.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\imu963.c</FilePath>
-            </File>
-            <File>
               <FileName>smotor.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\CODE\smotor.h</FilePath>
@@ -4536,36 +4456,6 @@
               <FilePath>..\CODE\button.c</FilePath>
             </File>
             <File>
-              <FileName>encoder.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\encoder.c</FilePath>
-            </File>
-            <File>
-              <FileName>encoder.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\encoder.h</FilePath>
-            </File>
-            <File>
-              <FileName>motor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\motor.c</FilePath>
-            </File>
-            <File>
-              <FileName>motor.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\motor.h</FilePath>
-            </File>
-            <File>
-              <FileName>timer_pit.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\timer_pit.c</FilePath>
-            </File>
-            <File>
-              <FileName>timer_pit.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\timer_pit.h</FilePath>
-            </File>
-            <File>
               <FileName>filter.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\CODE\filter.c</FilePath>
@@ -4574,26 +4464,6 @@
               <FileName>filter.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\CODE\filter.h</FilePath>
-            </File>
-            <File>
-              <FileName>carmove.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\carmove.c</FilePath>
-            </File>
-            <File>
-              <FileName>carmove.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\carmove.h</FilePath>
-            </File>
-            <File>
-              <FileName>openart2.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\openart2.c</FilePath>
-            </File>
-            <File>
-              <FileName>openart2.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\openart2.h</FilePath>
             </File>
             <File>
               <FileName>openart1.c</FileName>
@@ -4606,24 +4476,14 @@
               <FilePath>..\CODE\openart1.h</FilePath>
             </File>
             <File>
-              <FileName>icm20602.c</FileName>
+              <FileName>timer_pit.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\CODE\icm20602.c</FilePath>
+              <FilePath>..\..\..\smart-car\Project\CODE\timer_pit.c</FilePath>
             </File>
             <File>
-              <FileName>icm20602.h</FileName>
+              <FileName>timer_pit.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\CODE\icm20602.h</FilePath>
-            </File>
-            <File>
-              <FileName>carmove2.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\CODE\carmove2.c</FilePath>
-            </File>
-            <File>
-              <FileName>carmove2.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\CODE\carmove2.h</FilePath>
+              <FilePath>..\..\..\smart-car\Project\CODE\timer_pit.h</FilePath>
             </File>
           </Files>
         </Group>

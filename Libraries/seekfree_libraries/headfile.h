@@ -87,21 +87,15 @@
 
 ////------User Defined
 #include "rtthread.h"
-#include "motor.h"
 #include "math.h"
-#include "encoder.h"
-#include "timer_pit.h"
 #include "display.h"
 #include "smotor.h"
 #include "buzzer.h"
 #include "button.h"
 #include "filter.h"
-#include "carmove.h"
-#include "carmove2.h"
-#include "imu963.h"
 #include "openart1.h"
-#include "openart2.h"
-#include "icm20602.h"
+#include "timer_pit.h"
+
 
 #endif
 
