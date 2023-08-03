@@ -8,11 +8,11 @@ import sensor, image, time
 
 uart_num = 0
 
-red_point_threshold = [(81, 100, -128, 127, -128, 127)]
-green_point_threshold = [(57, 100, -128, 127, -128, 127)]
+red_point_threshold = [(62, 100, -15, 127, 19, 127)]
+green_point_threshold = [(89, 100, -77, -13, -67, 127)]
 rectangle_threshold = [(60, 67, 6, 55, -56, -24)]
 
-day_brightness = 2000
+day_brightness = 1000
 uart = UART(1, baudrate=115200) #串口
 
 
@@ -48,9 +48,9 @@ def find_point_red():
             recognize_flag = 0
             break
         else:
-            for b in img.find_blobs(red_point_threshold, pixels_threshold=50, area_threshold=50, margin=1, merge=True,
+            for b in img.find_blobs(red_point_threshold, pixels_threshold=2, area_threshold=15, margin=1, merge=True,
                                     invert=0):
-                img.draw_rectangle(b.rect(), color=(0, 255, 0), scale=1, thickness=2)
+                img.draw_rectangle(b.rect(), color=(0, 255, 0), scale=2, thickness=2)
 
 def find_point_green():
     recognize_flag = 1
@@ -62,9 +62,50 @@ def find_point_green():
             recognize_flag = 0
             break
         else:
-            for b in img.find_blobs(green_point_threshold, pixels_threshold=50, area_threshold=50, margin=1, merge=True,
+            for b in img.find_blobs(green_point_threshold, pixels_threshold=2, area_threshold=15, margin=1, merge=True,
                                     invert=0):
                 img.draw_rectangle(b.rect(), color=(255, 0, 0), scale=1, thickness=2)
+            for b in img.find_blobs(red_point_threshold, pixels_threshold=50, area_threshold=50, margin=1, merge=True,
+                                    invert=0):
+                img.draw_rectangle(b.rect(), color=(0, 255, 0), scale=1, thickness=2)
+
+
+
+def Tracking_point():
+    Tracking_point_flag = 1
+
+    while Tracking_point_flag:
+        red_x = 0
+        red_y = 0
+        green_x = 0
+        green_y = 0
+        img = sensor.snapshot()
+        uart_num = uart.any()  # 获取当前串口数据数量
+        if uart_num != 0:
+            Tracking_point_flag = 0
+            break
+        else:
+            green_blobs = img.find_blobs(green_point_threshold, pixels_threshold=2, area_threshold=15, margin=1, merge=True, invert=0)
+            if green_blobs:
+                for blob in green_blobs:
+                    green_x = blob.cx()
+                    green_y = blob.cy()
+                    img.draw_rectangle(blob.rect(), color=(255, 0, 0), scale=2, thickness=2)
+                    break  # If you want to consider only one green blob, you can break the loop here
+
+            red_blobs = img.find_blobs(red_point_threshold, pixels_threshold=2, area_threshold=15, margin=1, merge=True, invert=0)
+            if red_blobs:
+                for blob in red_blobs:
+                    red_x = blob.cx()
+                    red_y = blob.cy()
+                    img.draw_rectangle(blob.rect(), color=(0, 255, 0), scale=2, thickness=2)
+                    break  # If you want to consider only one red blob, you can break the loop here
+
+            if green_blobs and red_blobs:
+
+                img.draw_line(green_x, green_y, red_x, red_y, color=(0, 0, 255))
+                print(green_x - red_x, green_y - red_y)
+
 
 
 def find_rectangle():
@@ -94,9 +135,14 @@ def find_rectangle():
 
                 x0, y0 = point_corners[3]
                 x1, y1 = point_corners[2]
+                x2, y2 = point_corners[1]
                 x3, y3 = point_corners[0]
 
-                img.draw_circle(b.cx(), b.cy(), 5, color=(0, 255, 0))
+
+                print(x0,y0,x1,y1,x2,y2,x3,y3)
+
+
+                #img.draw_circle(r.cx(), r.cy(), 5, color=(0, 255, 0))
 
 
 def find_boundary():
@@ -133,8 +179,10 @@ def main():
 
     while(True):
         img = sensor.snapshot()
+        Tracking_point()
+        #find_point_green()
         #find_point_red()
-        find_rectangle()
+        #find_rectangle()
         #find_boundary()
         uart_num = uart.any()
         if (uart_num):
