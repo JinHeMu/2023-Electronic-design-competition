@@ -123,7 +123,7 @@ def find_rectangle():
             find_flag = 0
             break
         else:
-            for r in img.find_rects(threshold = 20000):
+            for r in img.find_rects(threshold = 10000):
                 img.draw_rectangle(r.rect(), color = (255, 0, 0))   # 绘制红色矩形框
                 img_x=(int)(r.rect()[0]+r.rect()[2]/2)              # 图像中心的x值
                 img_y=(int)(r.rect()[1]+r.rect()[3]/2)              # 图像中心的y值
@@ -138,8 +138,25 @@ def find_rectangle():
                 x2, y2 = point_corners[1]
                 x3, y3 = point_corners[0]
 
+                uart.write("A")  # 发送包头
 
+                uart.write("%c" % (x0))
+                uart.write("%c" % (y0))
+                uart.write("%c" % (x1))
+                uart.write("%c" % (y1))
+                uart.write("%c" % (x2))
+                uart.write("%c" % (y2))
+                uart.write("%c" % (x3))
+                uart.write("%c" % (y3))
+
+
+                uart.write("Y")  # 发送包尾
+                
                 print(x0,y0,x1,y1,x2,y2,x3,y3)
+                find_flag = 0
+                break
+
+
 
 
                 #img.draw_circle(r.cx(), r.cy(), 5, color=(0, 255, 0))
@@ -179,7 +196,7 @@ def main():
 
     while(True):
         img = sensor.snapshot()
-        Tracking_point()
+        #Tracking_point()
         #find_point_green()
         #find_point_red()
         #find_rectangle()
@@ -190,7 +207,9 @@ def main():
             if(uart_str.decode() == "A"):
                 print("A")
                 uart_num=0
-                find_point_red()
+                find_rectangle()
+
+
 
 
 
