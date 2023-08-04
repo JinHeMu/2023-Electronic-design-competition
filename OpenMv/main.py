@@ -138,6 +138,17 @@ def Tracking_point():
                 uart.write("Y")  # 发送包尾
 
 
+def sort_points(corners):
+    # Step 1: Find the center
+    center = [sum([corner[0] for corner in corners]) / 4, sum([corner[1] for corner in corners]) / 4]
+
+    # Step 2: Sort by angle
+    corners.sort(key=lambda point: math.atan2(point[1] - center[1], point[0] - center[0]))
+
+    return corners
+
+
+
 def find_rectangle():
 
 
@@ -159,20 +170,38 @@ def find_rectangle():
                 img_y=(int)(r.rect()[1]+r.rect()[3]/2)              # 图像中心的y值
                 img.draw_circle(img_x, img_y, 5, color = (0, 255, 0)) # 给矩形中心绘制一个小圆 便于观察矩形中心是否识别正确
                 corners = r.corners()
-                point_corners = tuple(sorted(corners))
+                sorted_corners = sort_points(corners)
                 for corner in corners:
                     img.draw_circle(corner[0], corner[1], 5, color=(0, 255, 0))
 
-                x0, y0 = point_corners[3]
-                x1, y1 = point_corners[2]
-                x2, y2 = point_corners[1]
-                x3, y3 = point_corners[0]
+                x0, y0 = point_corners[0]
+                x1, y1 = point_corners[1]
+                x2, y2 = point_corners[2]
+                x3, y3 = point_corners[3]
 
+
+                uart.write("A")  # 发送包头
+
+                uart.write("%c" % (x0))
+                uart.write("%c" % (y0))
+                uart.write("%c" % (x1))
+                uart.write("%c" % (y1))
+                uart.write("%c" % (x2))
+                uart.write("%c" % (y2))
+                uart.write("%c" % (x3))
+                uart.write("%c" % (y3))
+
+
+                uart.write("Y")  # 发送包尾
 
                 print(x0,y0,x1,y1,x2,y2,x3,y3)
+                find_flag = 0
+                break
+
 
 
                 #img.draw_circle(r.cx(), r.cy(), 5, color=(0, 255, 0))
+
 
 
 def find_boundary():
@@ -209,7 +238,7 @@ def main():
 
     while(True):
         img = sensor.snapshot()
-        Tracking_point()
+        #Tracking_point()
         #find_point_green()
         #find_point_red()
         #find_rectangle()

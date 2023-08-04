@@ -52,10 +52,10 @@ void Menu_key_set(void)
 //		ARM_UP_MOVE(angle_y*20);
 //		ARM_UP_MOVE(angle_y*10);
 //		ARM_back();
-//		angle_y++;
-//		ARM_UP_TAR_ANGLE = angle_y;
-//////		
-//		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
+		angle_y++;
+		ARM_UP_TAR_ANGLE = angle_y;
+////		
+		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
 		
 		
 //		ARM_UP_TAR_ANGLE = 127.0545  -0.2443 * 118;
@@ -80,7 +80,7 @@ void Menu_key_set(void)
 //		smooth_move(175, 98, 223, 98);
 //		smooth_move(223, 98, 223, 118);
 //		smooth_move(223, 118, 175, 118);
-		ARM_scan_rectangle();
+//		ARM_scan_rectangle();
 
 
 		
@@ -100,12 +100,12 @@ void Menu_key_set(void)
 //		ARM_LOW_MOVE(angle_x*10);
 //		angle_y--;
 //		ARM_UP_TAR_ANGLE = angle_y;
-//		
+		
 		
 //	
 				uart_putchar(USART_4, 0x41);
 ////		
-//		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
+		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
 		
 		
 		
@@ -119,10 +119,10 @@ void Menu_key_set(void)
 //			ARM_LOW_angle(angle_x);
 //			ips114_showint16(70, 0, angle_y);
 //			
-////			angle_x++;
-////		
-////			ARM_LOW_TAR_ANGLE = angle_x;
-		ARM_back();
+			angle_x++;
+		
+			ARM_LOW_TAR_ANGLE = angle_x;
+//		ARM_back();
 //		ARM_scan_rectangle();
 
 			
@@ -151,8 +151,6 @@ void Menu_key_set(void)
 		mb_data = 0; // ÓÊÏäÊý¾ÝÇå³ý
 	}
 	
-	rt_thread_mdelay(100);
-
 }
 
 

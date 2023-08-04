@@ -21,7 +21,6 @@ float ARM_LOW_CURRENT_ANGLE = 90;
 float ARM_UP_TAR_ANGLE = 88;
 float ARM_LOW_TAR_ANGLE = 90;
 
-int ARM_MOVE_DELAY_MS = 20;
 float ANGLE_INCREMENT = 0.01;
 
 
@@ -67,34 +66,33 @@ void ARM_LOW_MOVE(float target) {
 
 void ARM_scan_rectangle(void) 
 	{
-		ARM_UP_TAR_ANGLE = 90;
-		ARM_LOW_TAR_ANGLE = 110;
+		ARM_UP_TAR_ANGLE = 101;
+		ARM_LOW_TAR_ANGLE = 103;
 		rt_thread_mdelay(3000);
 		
-		ARM_UP_TAR_ANGLE = 90;
-		ARM_LOW_TAR_ANGLE = 90;
+		ARM_UP_TAR_ANGLE = 101;
+		ARM_LOW_TAR_ANGLE = 76;
 		rt_thread_mdelay(3000);
 		
-//		ARM_UP_TAR_ANGLE = 90;
-//		ARM_LOW_TAR_ANGLE = 83;
-//		rt_thread_mdelay(3000);
-//		
-//		ARM_UP_TAR_ANGLE = 90;
-//		ARM_LOW_TAR_ANGLE = 107.5;
-//		rt_thread_mdelay(3000);
-//		
-//		ARM_UP_TAR_ANGLE = 110;
-//		ARM_LOW_TAR_ANGLE = 107.5;
-//		rt_thread_mdelay(3000);
-
+		ARM_UP_TAR_ANGLE = 75;
+		ARM_LOW_TAR_ANGLE = 76;
+		rt_thread_mdelay(3000);
+		
+		ARM_UP_TAR_ANGLE = 75;
+		ARM_LOW_TAR_ANGLE = 103;
+		rt_thread_mdelay(3000);
+		
+		ARM_UP_TAR_ANGLE = 101;
+		ARM_LOW_TAR_ANGLE = 103;
+		rt_thread_mdelay(3000);
     // 如果当前角度等于目标角度，我们不需要做任何事情
 }
 
 
 void ARM_back(void)
 {
-	ARM_UP_TAR_ANGLE = 94;
-	ARM_LOW_TAR_ANGLE = 96;
+	ARM_UP_TAR_ANGLE = 88;
+	ARM_LOW_TAR_ANGLE = 90;
 }
 
 void smooth_move(int x1, int y1, int x2, int y2) {
@@ -128,9 +126,9 @@ void smooth_move(int x1, int y1, int x2, int y2) {
 		pwm_init(ARM_UP_PIN, 200, ARM_CENTER);
 		pwm_init(ARM_LOW_PIN, 200, ARM_CENTER);
 
+		ARM_UP_angle(88); // 收回，防止目标检测识别到
+		ARM_LOW_angle(90);
 
-		ARM_LOW_angle(96);
-		ARM_UP_angle(94); // 收回，防止目标检测识别到
 
-		rt_thread_mdelay(200);
+		rt_thread_mdelay(2000);
 	}

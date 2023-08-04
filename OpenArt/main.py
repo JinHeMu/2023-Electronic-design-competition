@@ -108,6 +108,18 @@ def Tracking_point():
 
 
 
+def sort_points(corners):
+    # Step 1: Find the center
+    center = [sum([corner[0] for corner in corners]) / 4, sum([corner[1] for corner in corners]) / 4]
+
+    # Step 2: Sort by angle
+    corners_list = list(corners)
+    corners_list.sort(key=lambda point: math.atan2(point[1] - center[1], point[0] - center[0]))
+
+    return tuple(corners_list) # convert list back to tuple after sorting
+
+
+
 def find_rectangle():
 
 
@@ -123,20 +135,23 @@ def find_rectangle():
             find_flag = 0
             break
         else:
-            for r in img.find_rects(threshold = 10000):
+            for r in img.find_rects(threshold = 30000):
                 img.draw_rectangle(r.rect(), color = (255, 0, 0))   # 绘制红色矩形框
                 img_x=(int)(r.rect()[0]+r.rect()[2]/2)              # 图像中心的x值
                 img_y=(int)(r.rect()[1]+r.rect()[3]/2)              # 图像中心的y值
                 img.draw_circle(img_x, img_y, 5, color = (0, 255, 0)) # 给矩形中心绘制一个小圆 便于观察矩形中心是否识别正确
                 corners = r.corners()
-                point_corners = tuple(sorted(corners))
+                sorted_corners = sort_points(corners)
                 for corner in corners:
-                    img.draw_circle(corner[0], corner[1], 5, color=(0, 255, 0))
+                    img.draw_circle(corner[0], corner[1], 2, color=(0, 255, 0))
 
-                x0, y0 = point_corners[3]
-                x1, y1 = point_corners[2]
-                x2, y2 = point_corners[1]
-                x3, y3 = point_corners[0]
+
+                x0, y0 = sorted_corners[0]
+                x1, y1 = sorted_corners[1]
+                x2, y2 = sorted_corners[2]
+                x3, y3 = sorted_corners[3]
+
+                print(x0,y0,x1,y1,x2,y2,x3,y3)
 
                 uart.write("A")  # 发送包头
 
@@ -151,10 +166,11 @@ def find_rectangle():
 
 
                 uart.write("Y")  # 发送包尾
-                
+
                 print(x0,y0,x1,y1,x2,y2,x3,y3)
                 find_flag = 0
                 break
+                #img.draw_circle(r.cx(), r.cy(), 5, color=(0, 255, 0))
 
 
 
