@@ -1,11 +1,12 @@
 #include "control.h"
 
 
-//float track_x_kp = 0.003, track_x_ki = 0.0001, track_x_kd = 0;
-double  track_x_kp = 0.0025, track_x_ki = 0.000001, track_x_kd = 0.000001;
-//float track_x_kp = 0.003, track_x_ki = 0.0001, track_x_kd = 0;
+double  track_x_kp = 0.001, track_x_ki = 0 ,track_x_kd = 0.016;
 
-double  track_y_kp = 0.002, track_y_ki = 0, track_y_kd = 0;
+//double  track_x_kp = 0, track_x_ki = 0 ,track_x_kd = 0;
+
+
+double  track_y_kp = 0.0015, track_y_ki = 0, track_y_kd = 0.024;
 
 rt_sem_t Tracking_point_sem;//识别坐标点后信号量
 rt_thread_t Tracking_point_th;

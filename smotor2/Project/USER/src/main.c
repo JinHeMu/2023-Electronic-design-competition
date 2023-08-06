@@ -44,7 +44,7 @@ void main()
 
 //		rt_sem_release(Tracking_point_sem);
 
-//	rt_mb_send(buzzer_mailbox, 2000); // 给buzzer_mailbox发送100
+	rt_mb_send(buzzer_mailbox, 2000); // 给buzzer_mailbox发送100
 	while (1)
 	{
 		

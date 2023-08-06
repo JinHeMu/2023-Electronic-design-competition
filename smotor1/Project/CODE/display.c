@@ -2,8 +2,8 @@
 
 rt_mailbox_t display_mailbox; // 定义一个接受信息的邮箱
 
-int angle_x = 90;
-int angle_y = 88;
+int angle_x = 89;
+int angle_y = 87;
 
 
 char taget_Big_category[10];
@@ -52,8 +52,8 @@ void Menu_key_set(void)
 //		ARM_UP_MOVE(angle_y*20);
 //		ARM_UP_MOVE(angle_y*10);
 //		ARM_back();
-		angle_y++;
-		ARM_UP_TAR_ANGLE = angle_y;
+//		angle_y++;
+//		ARM_UP_TAR_ANGLE = angle_y;
 ////		
 		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
 		
@@ -80,7 +80,7 @@ void Menu_key_set(void)
 //		smooth_move(175, 98, 223, 98);
 //		smooth_move(223, 98, 223, 118);
 //		smooth_move(223, 118, 175, 118);
-//		ARM_scan_rectangle();
+		ARM_scan_rectangle();
 
 
 		
@@ -100,7 +100,7 @@ void Menu_key_set(void)
 //		ARM_LOW_MOVE(angle_x*10);
 //		angle_y--;
 //		ARM_UP_TAR_ANGLE = angle_y;
-		
+//		
 		
 //	
 				uart_putchar(USART_4, 0x41);
@@ -119,14 +119,14 @@ void Menu_key_set(void)
 //			ARM_LOW_angle(angle_x);
 //			ips114_showint16(70, 0, angle_y);
 //			
-			angle_x++;
-		
-			ARM_LOW_TAR_ANGLE = angle_x;
+//			angle_x++;
+//		
+//			ARM_LOW_TAR_ANGLE = angle_x;
 //		ARM_back();
 //		ARM_scan_rectangle();
-
+			rt_timer_stop(timer);
 			
-		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
+//		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
 			
 //ARM_UP_TAR_ANGLE = 90;
 		mb_data = 0; // 邮箱数据清除
@@ -150,6 +150,35 @@ void Menu_key_set(void)
 //			ARM_UP_TAR_ANGLE = 150;
 		mb_data = 0; // 邮箱数据清除
 	}
+
+
+
+
+
+//if (rt_sem_take(key1_sem, RT_WAITING_FOREVER) == RT_EOK)
+//{
+//    // 处理按键1被按下的事件
+//	ARM_scan_rectangle();
+//}
+//else if (rt_sem_take(key2_sem, RT_WAITING_FOREVER) == RT_EOK)
+//{
+//    // 处理按键2被按下的事件
+//	uart_putchar(USART_4, 0x41);
+//}else if (rt_sem_take(key3_sem, RT_WAITING_FOREVER) == RT_EOK)
+//{
+//    // 处理按键2被按下的事件
+//	rt_timer_stop(timer);
+//}
+//else if (rt_sem_take(key4_sem, RT_WAITING_FOREVER) == RT_EOK)
+//{
+//    // 处理按键2被按下的事件
+//	ARM_back();
+//}
+
+
+
+
+
 	
 }
 
@@ -167,16 +196,73 @@ void display_entry(void *parameter)
 	
 }
 
-void display1_entry(void *parameter)
+
+
+
+
+void key1_entry(void *parameter)
 {
 	while(1)
 {
-	Menu_key_set();
-	//GUI_motor_value();
-//	GUI_imu_ra_value();
+	rt_sem_take(key1_sem, RT_WAITING_FOREVER);
+	
+
+
+    // 处理按键2被按下的事件
+	
+
+		ARM_scan_rectangle();
+
+
+}
+
+}
+	
+
+
+void key2_entry(void *parameter)
+{
+	while(1)
+{
+	rt_sem_take(key2_sem, RT_WAITING_FOREVER);
+	uart_putchar(USART_4, 0x41);
 }
 	
 }
+
+
+void key3_entry(void *parameter)
+{
+	while(1)
+{
+	rt_sem_take(key3_sem, RT_WAITING_FOREVER);
+
+		ARM_back();
+
+}
+	
+}
+
+
+void key4_entry(void *parameter)
+{
+	while(1)
+{
+	rt_sem_take(key4_sem, RT_WAITING_FOREVER);
+	static uint8 count;
+	count ++;
+	if(count % 2)
+	{
+			rt_timer_stop(timer);
+	}else
+	{
+		rt_timer_start(timer);
+	}
+
+}
+	
+}
+
 
 
 
@@ -187,20 +273,31 @@ void display_init(void)
 {
 
 	rt_thread_t display_th;
-	rt_thread_t display1_th;
+	
+//	rt_thread_t key1_th;
+//	rt_thread_t key2_th;
+	rt_thread_t key3_th;
+//	rt_thread_t key4_th;
 
 	// 初始化屏幕
 	ips114_init();
 
 	// 创建显示线程 优先级设置为31
 	display_th = rt_thread_create("display", display_entry, RT_NULL, 1024, 30, 10);
-	display1_th = rt_thread_create("display1", display1_entry, RT_NULL, 1024, 29, 10);
+//	
+//	key1_th = rt_thread_create("key1_th", key1_entry, RT_NULL, 1024, 29, 10);
+//	key2_th = rt_thread_create("key2_th", key2_entry, RT_NULL, 1024, 28, 10);
+	key3_th = rt_thread_create("key3_th", key3_entry, RT_NULL, 1024, 27, 10);
+//	key4_th = rt_thread_create("key4_th", key4_entry, RT_NULL, 1024, 26, 10);
 
 	display_mailbox = rt_mb_create("display", 5, RT_IPC_FLAG_FIFO);
 
 	// 启动显示线程
-	if (RT_NULL != display_th)
-	{
-		rt_thread_startup(display_th);
-	}
+
+	rt_thread_startup(display_th);
+//rt_thread_startup(key1_th);
+//rt_thread_startup(key2_th);
+	rt_thread_startup(key3_th);
+//rt_thread_startup(key4_th);
+
 }

@@ -14,7 +14,7 @@ void timer1_pit_entry(void *parameter)//一个时钟节拍一毫秒
 
 				ARM_UP_MOVE(ARM_UP_TAR_ANGLE);ARM_LOW_MOVE(ARM_LOW_TAR_ANGLE);
 				picture_x_pid(ART1_POINT_X, 0);
-				//picture_y_pid(ART1_POINT_Y, 0);
+				picture_y_pid(ART1_POINT_Y, 0);
 							
 				
     }

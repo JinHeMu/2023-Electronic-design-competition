@@ -102,7 +102,7 @@ void Menu_key_set(void)
 //		ARM_UP_TAR_ANGLE = angle_y;
 
 //		track_ki += 0.0000001;
-	
+	track_x_kd += 0.0001;
 		
 		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
 		
@@ -124,7 +124,7 @@ void Menu_key_set(void)
 //		
 //		track_kd += 0.0000001;
 
-
+track_y_kd += 0.001;
 		rt_kprintf("angle_x:%d angle_y:%d\n",angle_x,angle_y);
 			
 //ARM_UP_TAR_ANGLE = 90;
@@ -167,6 +167,14 @@ void display_entry(void *parameter)
 }
 
 
+//void display_entry(void *parameter)
+//{
+//	while(1)
+//{
+//	
+//}
+//	
+//}
 
 
 //}
@@ -175,18 +183,31 @@ void display_init(void)
 {
 
 	rt_thread_t display_th;
+	
+//	rt_thread_t key1_th;
+//	rt_thread_t key2_th;
+//	rt_thread_t key3_th;
+//	rt_thread_t key4_th;
 
 	// 初始化屏幕
 	ips114_init();
 
 	// 创建显示线程 优先级设置为31
 	display_th = rt_thread_create("display", display_entry, RT_NULL, 1024, 30, 10);
+	
+//	key1_th = rt_thread_create("key1_th", key1_entry, RT_NULL, 1024, 29, 10);
+//	key2_th = rt_thread_create("key2_th", key2_entry, RT_NULL, 1024, 28, 10);
+//	key3_th = rt_thread_create("key3_th", key3_entry, RT_NULL, 1024, 27, 10);
+//	key4_th = rt_thread_create("key4_th", key4_entry, RT_NULL, 1024, 26, 10);
 
 	display_mailbox = rt_mb_create("display", 5, RT_IPC_FLAG_FIFO);
 
 	// 启动显示线程
-	if (RT_NULL != display_th)
-	{
-		rt_thread_startup(display_th);
-	}
+
+	rt_thread_startup(display_th);
+//	rt_thread_startup(key1_th);
+//	rt_thread_startup(key2_th);
+//	rt_thread_startup(key3_th);
+//	rt_thread_startup(key4_th);
+//	
 }

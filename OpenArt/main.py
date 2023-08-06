@@ -12,9 +12,10 @@ red_point_threshold = [(62, 100, -15, 127, 19, 127)]
 green_point_threshold = [(89, 100, -77, -13, -67, 127)]
 rectangle_threshold = [(60, 67, 6, 55, -56, -24)]
 
-day_brightness = 1000
-uart = UART(1, baudrate=115200) #串口
+day_brightness = 2000
+uart = UART(2, baudrate=115200) #串口
 
+binary_threshold = (84, 255)
 
 
 #139,189
@@ -30,7 +31,7 @@ corner4 = [139,85]
 def openart_init():
 
     sensor.reset()
-    sensor.set_pixformat(sensor.RGB565)
+    sensor.set_pixformat(sensor.GRAYSCALE)
     sensor.set_framesize(sensor.QVGA)
     sensor.set_brightness(day_brightness)
     sensor.skip_frames(20)
@@ -135,47 +136,53 @@ def find_rectangle():
             find_flag = 0
             break
         else:
-            for r in img.find_rects(threshold = 30000):
-                img.draw_rectangle(r.rect(), color = (255, 0, 0))   # 绘制红色矩形框
-                img_x=(int)(r.rect()[0]+r.rect()[2]/2)              # 图像中心的x值
-                img_y=(int)(r.rect()[1]+r.rect()[3]/2)              # 图像中心的y值
-                img.draw_circle(img_x, img_y, 5, color = (0, 255, 0)) # 给矩形中心绘制一个小圆 便于观察矩形中心是否识别正确
-                corners = r.corners()
-                sorted_corners = sort_points(corners)
-                for corner in corners:
-                    img.draw_circle(corner[0], corner[1], 2, color=(0, 255, 0))
 
 
-                x0, y0 = sorted_corners[0]
-                x1, y1 = sorted_corners[1]
-                x2, y2 = sorted_corners[2]
-                x3, y3 = sorted_corners[3]
-
-                print(x0,y0,x1,y1,x2,y2,x3,y3)
-
-                uart.write("A")  # 发送包头
-
-                uart.write("%c" % (x0))
-                uart.write("%c" % (y0))
-                uart.write("%c" % (x1))
-                uart.write("%c" % (y1))
-                uart.write("%c" % (x2))
-                uart.write("%c" % (y2))
-                uart.write("%c" % (x3))
-                uart.write("%c" % (y3))
+            img.binary([binary_threshold])
+            img.erode(2)
+            img.dilate(2)
+            for r in img.find_rects(threshold = 10000):
+                if r.w() > 30 and r.w() < 250 and r.h() > 30 and r.h() < 180:
+                    img.draw_rectangle(r.rect(), color = (255, 0, 0))   # 绘制红色矩形框
+                    img_x=(int)(r.rect()[0]+r.rect()[2]/2)              # 图像中心的x值
+                    img_y=(int)(r.rect()[1]+r.rect()[3]/2)              # 图像中心的y值
+                    img.draw_circle(img_x, img_y, 5, color = (0, 255, 0)) # 给矩形中心绘制一个小圆 便于观察矩形中心是否识别正确
+                    corners = r.corners()
+                    sorted_corners = sort_points(corners)
+                    for corner in corners:
+                        img.draw_circle(corner[0], corner[1], 2, color=(0, 255, 0))
 
 
-                uart.write("Y")  # 发送包尾
+                    x0, y0 = sorted_corners[0]
+                    x1, y1 = sorted_corners[1]
+                    x2, y2 = sorted_corners[2]
+                    x3, y3 = sorted_corners[3]
 
-                print(x0,y0,x1,y1,x2,y2,x3,y3)
-                find_flag = 0
-                break
-                #img.draw_circle(r.cx(), r.cy(), 5, color=(0, 255, 0))
+                    print(x0,y0,x1,y1,x2,y2,x3,y3)
+
+                    uart.write("A")  # 发送包头
+
+                    uart.write("%c" % (x0+2))
+                    uart.write("%c" % (y0+2))
+                    uart.write("%c" % (x1-2))
+                    uart.write("%c" % (y1+2))
+                    uart.write("%c" % (x2-2))
+                    uart.write("%c" % (y2-2))
+                    uart.write("%c" % (x3+2))
+                    uart.write("%c" % (y3-2))
+
+
+                    uart.write("Y")  # 发送包尾
+
+                    print(x0,y0,x1,y1,x2,y2,x3,y3)
+                    find_flag = 0
+                    break
+                    #img.draw_circle(r.cx(), r.cy(), 5, color=(0, 255, 0))
 
 
 
 
-                #img.draw_circle(r.cx(), r.cy(), 5, color=(0, 255, 0))
+                    #img.draw_circle(r.cx(), r.cy(), 5, color=(0, 255, 0))
 
 
 def find_boundary():

@@ -15,7 +15,8 @@ void ARM_UP_MOVE(float target);
 void ARM_LOW_MOVE(float target);
 void ARM_scan_rectangle(void);
 void ARM_back(void);
-void smooth_move(int x1, int y1, int x2, int y2) ;
+void smooth_move(float x1, float y1, float x2, float y2);
+void smooth_move_angle(float x1, float y1, float x2, float y2);
 void ARM_UP_angle(float angle);
 void ARM_LOW_angle(float angle);
 

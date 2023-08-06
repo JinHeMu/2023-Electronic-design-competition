@@ -75,6 +75,17 @@ void button_init(void)
     gpio_init(KEY_2, GPI, GPIO_HIGH, GPIO_PIN_CONFIG);
     gpio_init(KEY_3, GPI, GPIO_HIGH, GPIO_PIN_CONFIG);
     gpio_init(KEY_4, GPI, GPIO_HIGH, GPIO_PIN_CONFIG);
+	
+	
+//	
+//		gpio_interrupt_init(KEY_1, RISING, GPIO_PIN_CONFIG);
+//		gpio_interrupt_init(KEY_2, RISING, GPIO_PIN_CONFIG);
+//		gpio_interrupt_init(KEY_3, RISING, GPIO_PIN_CONFIG);
+//		gpio_interrupt_init(KEY_4, RISING, GPIO_PIN_CONFIG);
+//	
+//		NVIC_SetPriority(GPIO2_Combined_16_31_IRQn,15);
+//		NVIC_SetPriority(GPIO2_Combined_0_15_IRQn,15);
+
 
     key1_sem = rt_sem_create("key1", 0, RT_IPC_FLAG_FIFO); // 创建按键的信号量，当按键按下就释放信号量，在需要使用按键的地方获取信号量即可
     key2_sem = rt_sem_create("key2", 0, RT_IPC_FLAG_FIFO);

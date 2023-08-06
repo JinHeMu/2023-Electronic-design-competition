@@ -7,8 +7,12 @@ void main()
 	rt_thread_mdelay(800);					// 延时150ms，等待主板其他外设上电成功
 	gpio_init(B9, GPO, 1, GPIO_PIN_CONFIG); // 初始化B9灯
 	
+	
+	
+		arm_init();
+
 	timer_pit_init();
-	arm_init();
+
 
 
 	display_init(); // 显示屏初始化
@@ -20,8 +24,6 @@ void main()
 	arm_start_init();
 	
 
-	
- 
 //	
 //		smooth_move(178, 118, 170, 157);
 //		smooth_move(170, 157, 226, 169);
@@ -32,7 +34,7 @@ void main()
 //		smooth_move(164, 157, 223, 172);
 //		smooth_move(223, 172, 235, 133);
 //		smooth_move(235, 133, 175, 118);
-//	ARM_scan_rectangle();
+	//ARM_scan_rectangle();
 
 	//ARM_UP_MOVE(10);
 //	ARM_LOW_MOVE(150);

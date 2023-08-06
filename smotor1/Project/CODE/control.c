@@ -26,11 +26,11 @@ void find_rectangle_entry(void *param)
 					rt_kprintf("data_x:%d,%d\n", ART1_POINT_X[2],ART1_POINT_Y[2]);
 					rt_kprintf("data_x:%d,%d\n", ART1_POINT_X[3],ART1_POINT_Y[3]);
 			
-			smooth_move(ART1_POINT_X[0], ART1_POINT_Y[0], ART1_POINT_X[1], ART1_POINT_Y[1]);
-			smooth_move(ART1_POINT_X[1], ART1_POINT_Y[1], ART1_POINT_X[2], ART1_POINT_Y[2]);
-			smooth_move(ART1_POINT_X[2], ART1_POINT_Y[2], ART1_POINT_X[3], ART1_POINT_Y[3]);
-			smooth_move(ART1_POINT_X[3], ART1_POINT_Y[3], ART1_POINT_X[0], ART1_POINT_Y[0]);
-			
+				smooth_move(ART1_POINT_X[0], ART1_POINT_Y[0], ART1_POINT_X[1], ART1_POINT_Y[1]);
+				smooth_move(ART1_POINT_X[1], ART1_POINT_Y[1], ART1_POINT_X[2], ART1_POINT_Y[2]);
+				smooth_move(ART1_POINT_X[2], ART1_POINT_Y[2], ART1_POINT_X[3], ART1_POINT_Y[3]);
+				smooth_move(ART1_POINT_X[3], ART1_POINT_Y[3], ART1_POINT_X[0], ART1_POINT_Y[0]);
+				
 			
 		}
 		

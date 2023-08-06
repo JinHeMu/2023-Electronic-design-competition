@@ -1,10 +1,15 @@
 #线性拟合：y=a+bx
 import numpy as np
 x_array = np.array([
+37,
+30,
+47,
+70,
+82,
+96,
 109,
-161,
-161,
-109
+90,
+72
 
 
 
@@ -13,9 +18,14 @@ x_array = np.array([
 ])#x_array,y_array是我们要拟合的数据
 y_array = np.array([
 95,
+96,
+92,
+87,
+84,
 81,
-81,
-95
+78,
+83,
+86
 
 
 

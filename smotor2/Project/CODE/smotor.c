@@ -10,13 +10,13 @@ uint8 cur_angle = 1;
 uint32 prime = 1;
 
 // 定义机械臂的PWM IO口
-#define ARM_UP_PIN PWM1_MODULE0_CHA_D12
+#define ARM_UP_PIN PWM1_MODULE3_CHA_D0
 #define ARM_LOW_PIN PWM4_MODULE2_CHA_C30
 
 #define ARM_CENTER (1.5 * 50000 / 20)
 
-float ARM_UP_CURRENT_ANGLE = 88;
-float ARM_LOW_CURRENT_ANGLE = 90;
+float ARM_UP_CURRENT_ANGLE = 90;
+float ARM_LOW_CURRENT_ANGLE = 120;
 
 float ARM_UP_TAR_ANGLE = 90;
 float ARM_LOW_TAR_ANGLE = 120;

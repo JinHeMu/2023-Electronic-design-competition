@@ -12,14 +12,14 @@ uart_num = 0
 #rectangle_threshold = [(60, 67, 6, 55, -56, -24)]
 
 
-red_point_threshold = [(21, 100, 18, 127, -128, 127)]
-green_point_threshold = [(36, 100, -128, 12, -128, 127)]
+red_point_threshold = [(37, 100, -1, 127, -128, 127)]
+green_point_threshold = [(37, 100, -128, 20, -128, 127)]
 rectangle_threshold = [(60, 67, 6, 55, -56, -24)]
 
 
-day_brightness = 100
-uart = UART(2, baudrate=115200) #串口
-
+day_brightness = 2000
+uart = UART(1, baudrate=115200) #串口
+binary_threshold = ((51, 255))
 
 
 #139,189
@@ -39,6 +39,9 @@ def openart_init():
     sensor.set_framesize(sensor.QVGA)
     sensor.set_brightness(day_brightness)
     sensor.skip_frames(20)
+    sensor.set_auto_gain(False)
+    sensor.set_auto_whitebal(False,(0,0,0))
+
     #sensor.set_auto_gain(True)
     #sensor.set_auto_whitebal(False,(0,0,0))
 
@@ -85,11 +88,16 @@ def Tracking_point():
         green_x = 0
         green_y = 0
         img = sensor.snapshot()
+        #img.binary([binary_threshold])
+        #img.erode(2)
+        #img.dilate(2)
+
         uart_num = uart.any()  # 获取当前串口数据数量
         if uart_num != 0:
             Tracking_point_flag = 0
             break
         else:
+
             green_blobs = img.find_blobs(green_point_threshold, pixels_threshold=2, area_threshold=5, margin=1, merge=True, invert=0)
             if green_blobs:
                 for blob in green_blobs:
@@ -238,7 +246,7 @@ def main():
 
     while(True):
         img = sensor.snapshot()
-        #Tracking_point()
+        Tracking_point()
         #find_point_green()
         #find_point_red()
         #find_rectangle()

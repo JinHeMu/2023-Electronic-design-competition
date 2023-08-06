@@ -3,6 +3,9 @@
 
 #include "headfile.h"
 
+extern rt_timer_t timer;
+
+
 void timer_pit_init(void);
 
 #endif

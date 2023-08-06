@@ -73,7 +73,7 @@ void ART1_uart_callback(LPUART_Type *base, lpuart_handle_t *handle, status_t sta
 					ART1_POINT_Y[1] = ART1_dat[3];
 					ART1_POINT_X[2] = ART1_dat[4];
 					ART1_POINT_Y[2] = ART1_dat[5];
-					ART1_POINT_X[3] = ART1_dat[6];
+					ART1_POINT_X[3] = ART1_dat[6] ;
 					ART1_POINT_Y[3] = ART1_dat[7];
 					
 //					rt_kprintf("data_x:%d,%d\n", ART1_POINT_X[0],ART1_POINT_Y[0]);
